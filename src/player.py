@@ -4,6 +4,7 @@ class Player():
     def __init__(self, name, currentRoom = None):
         self.name = name
         self.currentRoom = currentRoom
+        self.items = []
 
     
     def move(self, direction):
@@ -18,4 +19,7 @@ class Player():
         elif direction == "w"  and self.currentRoom.w_to is not None:
             self.currentRoom = self.currentRoom.w_to
         else:
-            return False 
+            return False
+
+    def pickup(self, item):
+        self.items.append(item)
