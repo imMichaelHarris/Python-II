@@ -12,3 +12,9 @@ class Room():
 
     def __str__(self):
         return f"{self.name}"
+
+    def add_item_to_room(self, item):
+        self.items.append(item)
+
+    def remove_item_from_room(self, item):
+        self.items.remove(item)

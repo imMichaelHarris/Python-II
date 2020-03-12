@@ -23,3 +23,7 @@ class Player():
 
     def pickup(self, item):
         self.items.append(item)
+    
+    def drop(self, item):
+        self.currentRoom.items.append(item)
+        self.items.remove(item)
